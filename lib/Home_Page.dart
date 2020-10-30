@@ -61,7 +61,7 @@ class _homePageState extends State<homePage> {
               ),
               CarouselSlider(
                 options: CarouselOptions(
-                  height: 126,
+                  height: 150,
                   aspectRatio: 16 / 9,
                   viewportFraction: 0.8,
                   //initialPage: 0,
@@ -73,65 +73,133 @@ class _homePageState extends State<homePage> {
                 ),
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 items: [
-                  CircularPercentIndicator(
-                    radius: 100.0,
-                    lineWidth: 6.0,
-                    animation: true,
-                    percent: 0.7, //to be changed
-                    center: Text(
-                      "70%", //to be changed
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
-                    ),
-                    footer: Text(
-                      "subject1", //to be changed
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
-                    ),
-                    circularStrokeCap: CircularStrokeCap.round,
-                    progressColor: Colors.red,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircularPercentIndicator(
+                        radius: 100.0,
+                        lineWidth: 6.0,
+                        animation: true,
+                        percent: 0.7, //to be changed
+                        center: Text(
+                          "70%", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        footer: Text(
+                          "subject1", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.red,
+                      ),
+                      CircularPercentIndicator(
+                        radius: 100.0,
+                        lineWidth: 6.0,
+                        animation: true,
+                        percent: 0.87, //to be changed
+                        center: Text(
+                          "87%", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        footer: Text(
+                          "subject2", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.green,
+                      ),
+//                      CircularPercentIndicator(
+//                        radius: 100.0,
+//                        lineWidth: 6.0,
+//                        animation: true,
+//                        percent: 0.62, //to be changed
+//                        center: Text(
+//                          "62%", //to be changed
+//                          style: TextStyle(
+//                              fontWeight: FontWeight.bold, fontSize: 20.0),
+//                        ),
+//                        footer: Text(
+//                          "subject3", //to be changed
+//                          style: TextStyle(
+//                              fontWeight: FontWeight.bold, fontSize: 20.0),
+//                        ),
+//                        circularStrokeCap: CircularStrokeCap.round,
+//                        progressColor: Colors.yellow,
+//                      ),
+                    ],
                   ),
-                  CircularPercentIndicator(
-                    radius: 100.0,
-                    lineWidth: 6.0,
-                    animation: true,
-                    percent: 0.87, //to be changed
-                    center: Text(
-                      "87%", //to be changed
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
-                    ),
-                    footer: Text(
-                      "subject2", //to be changed
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
-                    ),
-                    circularStrokeCap: CircularStrokeCap.round,
-                    progressColor: Colors.green,
-                  ),
-                  CircularPercentIndicator(
-                    radius: 100.0,
-                    lineWidth: 6.0,
-                    animation: true,
-                    percent: 0.62, //to be changed
-                    center: Text(
-                      "62%", //to be changed
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
-                    ),
-                    footer: Text(
-                      "subject3", //to be changed
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
-                    ),
-                    circularStrokeCap: CircularStrokeCap.round,
-                    progressColor: Colors.yellow,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircularPercentIndicator(
+                        radius: 100.0,
+                        lineWidth: 6.0,
+                        animation: true,
+                        percent: 0.7, //to be changed
+                        center: Text(
+                          "70%", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        footer: Text(
+                          "subject1", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.red,
+                      ),
+//                      CircularPercentIndicator(
+//                        radius: 100.0,
+//                        lineWidth: 6.0,
+//                        animation: true,
+//                        percent: 0.87, //to be changed
+//                        center: Text(
+//                          "87%", //to be changed
+//                          style: TextStyle(
+//                              fontWeight: FontWeight.bold, fontSize: 20.0),
+//                        ),
+//                        footer: Text(
+//                          "subject2", //to be changed
+//                          style: TextStyle(
+//                              fontWeight: FontWeight.bold, fontSize: 20.0),
+//                        ),
+//                        circularStrokeCap: CircularStrokeCap.round,
+//                        progressColor: Colors.green,
+//                      ),
+                      CircularPercentIndicator(
+                        radius: 100.0,
+                        lineWidth: 6.0,
+                        animation: true,
+                        percent: 0.62, //to be changed
+                        center: Text(
+                          "62%", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        footer: Text(
+                          "subject3", //to be changed
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.yellow,
+                      ),
+                    ],
                   ),
                 ],
               ),
               Container(
+                decoration: BoxDecoration(
+                  color: Color(0xffe8e8e8),
+                  borderRadius: BorderRadius.all(Radius.circular(15.0),
+                  ),
+                ),
                 margin: EdgeInsets.only(top: 30.0),
-                color: Color(0xffe8e8e8),
                 height: 300.0,
                 child: Column(
                   children: [
@@ -141,16 +209,20 @@ class _homePageState extends State<homePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 100,
-                            width: 100,
+
+                            height: 120,
+                            width: 120,
                             child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
                               color: Colors.white,
                               onPressed: () {
                                 setState(() {});
                               },
                               child: Column(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/attendence.jpeg'),
                                   Text('Attendence'),
@@ -159,16 +231,19 @@ class _homePageState extends State<homePage> {
                             ),
                           ),
                           Container(
-                            height: 100,
-                            width: 100,
+                            height: 120,
+                            width: 120,
                             child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
                               color: Colors.white,
                               onPressed: () {
                                 setState(() {});
                               },
                               child: Column(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/ciculars.jpeg'),
                                   Text('Notices'),
@@ -185,15 +260,19 @@ class _homePageState extends State<homePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 100,
-                            width: 100,
+                            height: 120,
+                            width: 120,
                             child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
                               onPressed: () {},
                               color: Colors.white,
                               child: Column(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
+
                                   Image.asset('images/notices.jpeg'),
                                   Text('To-Do'),
                                 ],
@@ -201,16 +280,19 @@ class _homePageState extends State<homePage> {
                             ),
                           ),
                           Container(
-                            height: 100,
-                            width: 100,
+                            height: 120,
+                            width: 120,
                             child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               color: Colors.white,
                               onPressed: () {
                                 setState(() {});
                               },
                               child: Column(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/timetable.jpeg'),
                                   Text('Time-Table'),
@@ -224,9 +306,115 @@ class _homePageState extends State<homePage> {
                   ],
                 ),
               ),
+             Container(
+               margin: EdgeInsets.symmetric(vertical: 20.0 , horizontal: 0),
+               child: Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                   Padding(
+                     child: Text(
+                       'Your Schedule',
+                       textAlign: TextAlign.left,
+                       style: TextStyle(
+                         color : Colors.black,
+                         fontWeight: FontWeight.bold,
+                         fontSize: 30.0,
+                       ),
+                     ),
+                     padding: EdgeInsets.fromLTRB(15.0, 8.0, 0, 8.0),
+                   ),
+                   Row(
+                     children: [
+                       Container(
+                         margin: EdgeInsets.fromLTRB(30.0 , 10.0, 10.0 ,0),
+                         decoration: BoxDecoration(
+                           color: Colors.lightBlueAccent.withOpacity(0.5),
+                           borderRadius: BorderRadius.all(Radius.circular(10.0),
+                           ),
+                         ),
+                         height: 60.0,
+                         width: 60.0,
+                       ),
+                       Container(
+                         margin: EdgeInsets.symmetric(vertical: 0 , horizontal: 3.0),
+                         width: 0.3,
+                         color: Colors.black,
+                         height: 100,
+                       ),
+                       Container(
+                         margin: EdgeInsets.fromLTRB(10.0 ,25.0,0,5.0),
+                         decoration: BoxDecoration(
+                           color: Color(0xffEDDBFB),
+                           borderRadius: BorderRadius.all(Radius.circular(10.0),
+                           ),
+                         ),
+                         width: 270.0,
+                         height: 150.0,
+                       ),
+                     ],
+                   ),
+
+//                   SizedBox(
+//                     height : 15.0,
+//                   ),
+                   Row(
+                     children: [
+                       Container(
+                         height: 60.0,
+                         width: 60.0,
+                         decoration: BoxDecoration(
+                           color: Colors.lightBlueAccent.withOpacity(0.5),
+                           borderRadius: BorderRadius.all(Radius.circular(10.0),
+                           ),
+                         ),
+                         margin: EdgeInsets.fromLTRB(30.0 , 10.0, 10.0 ,0),
+                       ),
+                       Container(
+                         margin: EdgeInsets.symmetric(vertical: 0 , horizontal: 3.0),
+                         width: 0.3,
+                         color: Colors.black,
+                         height: 100,
+                       ),
+                       Container(
+                         margin: EdgeInsets.fromLTRB(10.0 ,25.0,0,5.0),
+                         decoration: BoxDecoration(
+                           color: Color(0xffEDDBFB),
+                           borderRadius: BorderRadius.all(Radius.circular(10.0),
+                           ),
+                         ),
+                         width: 270.0,
+                         height: 150.0,
+                       ),
+                     ],
+                   ),
+                 ],
+               ),
+             ),
             ],
           ),
         ),
+        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.timeline),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.accessibility_new_outlined),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+        ],
+        selectedItemColor: Colors.amber[800],
+        unselectedItemColor: Colors.black,
       ),
     );
   }
