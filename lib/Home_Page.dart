@@ -7,20 +7,20 @@ import 'package:nsut_daily_app/screens/attendance_screen.dart';
 import 'package:nsut_daily_app/screens/notices_screen.dart';
 import 'package:nsut_daily_app/screens/todo_screen.dart';
 
+
+
 class homePage extends StatefulWidget {
+//  String subject1,subject2,subject3,subject4,subject5,subject6,subject7;
+//  double percent1,percent2,percent3,percent4,percent5,percent6,percent7;
+//  homePage({
+//   this.subject1,this.percent1,this.subject2,this.percent2,this.subject3,this.percent3,this.subject4,this.percent4,this.subject5,this.percent5,this.subject6,this.percent6,this.subject7,this.percent7
+//})
+
   @override
   _homePageState createState() => _homePageState();
 }
 
 class _homePageState extends State<homePage> {
-  //  String name;
-//  double subject1;
-//  double subject2;
-//  double subject3;
-//  double subject4;
-//  double subject5;
-//  double subject6;
-//  double subject7;
 
   @override
   Widget build(BuildContext context) {
@@ -77,9 +77,7 @@ class _homePageState extends State<homePage> {
                 color: Colors.white,
                 child: CarouselSlider(
                   options: CarouselOptions(
-                    height: 150,
-                    aspectRatio: 16 / 9,
-                    viewportFraction: 0.8,
+                    viewportFraction: 0.95,
                     //initialPage: 0,
                     enableInfiniteScroll: false,
                     reverse: false,
@@ -92,118 +90,47 @@ class _homePageState extends State<homePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        CircularPercentIndicator(
-                          radius: 100.0,
-                          lineWidth: 6.0,
-                          animation: true,
-                          percent: 0.7, //to be changed
-                          center: Text(
-                            "70%", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          footer: Text(
-                            "subject1", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          circularStrokeCap: CircularStrokeCap.round,
-                          progressColor: Colors.red,
+                        percentIndicator(
+                          subjectName: "Games",
+                          dPercentage: 0.99,
+//                          strPercentage: ,
+                          color: Colors.green,
                         ),
-                        CircularPercentIndicator(
-                          radius: 100.0,
-                          lineWidth: 6.0,
-                          animation: true,
-                          percent: 0.87, //to be changed
-                          center: Text(
-                            "87%", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          footer: Text(
-                            "subject2", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          circularStrokeCap: CircularStrokeCap.round,
-                          progressColor: Colors.green,
+                        percentIndicator(
+                          subjectName: "Art",
+                          dPercentage: 0,
+//                          strPercentage: "80%",
+                          color: Colors.yellow,
                         ),
-                        CircularPercentIndicator(
-                          radius: 100.0,
-                          lineWidth: 6.0,
-                          animation: true,
-                          percent: 0.62, //to be changed
-                          center: Text(
-                            "62%", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          footer: Text(
-                            "subject3", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          circularStrokeCap: CircularStrokeCap.round,
-                          progressColor: Colors.yellow,
+                        percentIndicator(
+                          subjectName: "Music",
+                          dPercentage: 0.8,
+//                          strPercentage: "80%",
+                          color: Colors.blue,
                         ),
+
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        CircularPercentIndicator(
-                          radius: 100.0,
-                          lineWidth: 6.0,
-                          animation: true,
-                          percent: 0.7, //to be changed
-                          center: Text(
-                            "70%", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          footer: Text(
-                            "subject1", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          circularStrokeCap: CircularStrokeCap.round,
-                          progressColor: Colors.red,
+                        percentIndicator(
+                          subjectName: "SST",
+                          dPercentage: 0.6,
+//                          strPercentage: "80%",
+                          color: Colors.red,
                         ),
-                        CircularPercentIndicator(
-                          radius: 100.0,
-                          lineWidth: 6.0,
-                          animation: true,
-                          percent: 0.87, //to be changed
-                          center: Text(
-                            "87%", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          footer: Text(
-                            "subject2", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          circularStrokeCap: CircularStrokeCap.round,
-                          progressColor: Colors.green,
+                        percentIndicator(
+                          subjectName: "English",
+                          dPercentage: 0.4,
+//                          strPercentage: "80%",
+                          color: Colors.black,
                         ),
-                        CircularPercentIndicator(
-                          radius: 100.0,
-                          lineWidth: 6.0,
-                          animation: true,
-                          percent: 0.62, //to be changed
-                          center: Text(
-                            "62%", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          footer: Text(
-                            "subject3", //to be changed
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0),
-                          ),
-                          circularStrokeCap: CircularStrokeCap.round,
-                          progressColor: Colors.yellow,
+                        percentIndicator(
+                          subjectName: "Science",
+                          dPercentage: 0.9,
+//                          strPercentage: "80%",
+                          color: Colors.pink,
                         ),
                       ],
                     ),
@@ -237,8 +164,8 @@ class _homePageState extends State<homePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 120,
-                            width: 120,
+                            height: 105,
+                            width: 105,
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
@@ -247,10 +174,9 @@ class _homePageState extends State<homePage> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (Context){
+                                  MaterialPageRoute(builder: (Context) {
                                     return Attendance();
-                                  }
-                                  ),
+                                  }),
                                 );
                               },
                               child: Column(
@@ -258,14 +184,19 @@ class _homePageState extends State<homePage> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/attendence.jpeg'),
-                                  Text('Attendance'),
+                                  Text(
+                                    'Attendance',
+                                    style: TextStyle(
+                                      letterSpacing: 0.05,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                           ),
                           Container(
-                            height: 120,
-                            width: 120,
+                            height: 105,
+                            width: 105,
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
@@ -274,10 +205,9 @@ class _homePageState extends State<homePage> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (Context){
+                                  MaterialPageRoute(builder: (Context) {
                                     return NoticesScreen();
-                                  }
-                                  ),
+                                  }),
                                 );
                               },
                               child: Column(
@@ -285,7 +215,11 @@ class _homePageState extends State<homePage> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/Notices.png'),
-                                  Text('Notices'),
+                                  Text('Notices',
+                                    style: TextStyle(
+                                      letterSpacing: 0.05,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -299,8 +233,8 @@ class _homePageState extends State<homePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 120,
-                            width: 120,
+                            height: 105,
+                            width: 105,
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
@@ -308,10 +242,9 @@ class _homePageState extends State<homePage> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (Context){
+                                  MaterialPageRoute(builder: (Context) {
                                     return ToDoClass();
-                                  }
-                                  ),
+                                  }),
                                 );
                               },
                               color: Colors.white,
@@ -320,14 +253,18 @@ class _homePageState extends State<homePage> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/ToDo.png'),
-                                  Text('To-Do'),
+                                  Text('To-Do',
+                                    style: TextStyle(
+                                      letterSpacing: 0.05,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                           ),
                           Container(
-                            height: 120,
-                            width: 120,
+                            height: 105,
+                            width: 105,
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
@@ -341,7 +278,11 @@ class _homePageState extends State<homePage> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset('images/timetable.jpeg'),
-                                  Text('Time-Table'),
+                                  Text('TimeTable',
+                                    style: TextStyle(
+                                      letterSpacing: 0.05,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -458,6 +399,38 @@ class _homePageState extends State<homePage> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class percentIndicator extends StatefulWidget {
+  percentIndicator({this.subjectName ,this.dPercentage  , this.color});
+  String subjectName;
+  double dPercentage;
+//  String strPercentage;
+  Color color;
+  @override
+  _percentIndicatorState createState() => _percentIndicatorState();
+}
+
+class _percentIndicatorState extends State<percentIndicator> {
+  @override
+  Widget build(BuildContext context) {
+    return CircularPercentIndicator(
+      radius: 100.0,
+      lineWidth: 6.0,
+      animation: true,
+      percent: widget.dPercentage, //to be changed
+      center: Text(
+        ((widget.dPercentage)*100).toString()+'%', //to be changed
+        style: TextStyle(fontSize: 15.0),
+      ),
+      footer: Text(
+        widget.subjectName, //to be changed
+        style: TextStyle(fontSize: 15.0),
+      ),
+      circularStrokeCap: CircularStrokeCap.round,
+      progressColor: widget.color,
     );
   }
 }
