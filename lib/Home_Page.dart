@@ -163,67 +163,9 @@ class _homePageState extends State<homePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            height: 105,
-                            width: 105,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              color: Colors.white,
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (Context) {
-                                    return Attendance();
-                                  }),
-                                );
-                              },
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image.asset('images/attendence.jpeg'),
-                                  Text(
-                                    'Attendance',
-                                    style: TextStyle(
-                                      letterSpacing: 0.05,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 105,
-                            width: 105,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              color: Colors.white,
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (Context) {
-                                    return NoticesScreen();
-                                  }),
-                                );
-                              },
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image.asset('images/Notices.png'),
-                                  Text('Notices',
-                                    style: TextStyle(
-                                      letterSpacing: 0.05,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          Button('Attendance','Attendance'),
+                          Button('Notices','NoticesScreen'),
+                         
                         ],
                       ),
                     ),
@@ -232,61 +174,8 @@ class _homePageState extends State<homePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            height: 105,
-                            width: 105,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (Context) {
-                                    return ToDoClass();
-                                  }),
-                                );
-                              },
-                              color: Colors.white,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image.asset('images/ToDo.png'),
-                                  Text('To-Do',
-                                    style: TextStyle(
-                                      letterSpacing: 0.05,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 105,
-                            width: 105,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              color: Colors.white,
-                              onPressed: () {
-                                setState(() {});
-                              },
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image.asset('images/timetable.jpeg'),
-                                  Text('TimeTable',
-                                    style: TextStyle(
-                                      letterSpacing: 0.05,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          Button('To-Do','ToDoClass'),
+                          Button('Time-Table',),
                         ],
                       ),
                     ),
@@ -434,3 +323,36 @@ class _percentIndicatorState extends State<percentIndicator> {
     );
   }
 }
+
+Container Button(String buttonName, String screenName){
+  return Container(
+                            height: 105,
+                            width: 105,
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              color: Colors.white,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (Context) {
+                                    return $screenName();
+                                  }),
+                                );
+                              },
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Image.asset('images/$q.jpeg'),
+                                  Text(
+                                    '$q',
+                                    style: TextStyle(
+                                      letterSpacing: 0.05,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
