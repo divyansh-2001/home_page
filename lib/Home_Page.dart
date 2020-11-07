@@ -7,8 +7,6 @@ import 'package:nsut_daily_app/screens/attendance_screen.dart';
 import 'package:nsut_daily_app/screens/notices_screen.dart';
 import 'package:nsut_daily_app/screens/todo_screen.dart';
 
-
-
 class homePage extends StatefulWidget {
 //  String subject1,subject2,subject3,subject4,subject5,subject6,subject7;
 //  double percent1,percent2,percent3,percent4,percent5,percent6,percent7;
@@ -21,7 +19,6 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
-
   @override
   Widget build(BuildContext context) {
     var accessibility_new_outlined;
@@ -108,7 +105,6 @@ class _homePageState extends State<homePage> {
 //                          strPercentage: "80%",
                           color: Colors.blue,
                         ),
-
                       ],
                     ),
                     Row(
@@ -163,9 +159,24 @@ class _homePageState extends State<homePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Button('Attendance','Attendance'),
-                          Button('Notices','NoticesScreen'),
-                         
+                          shortcutButton(
+                            displayText: 'Attendance',
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder:(Context){
+                                return Attendance();
+                              }),
+                              );
+                            },
+                          ),
+                          shortcutButton(
+                            displayText: 'Notices',
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder:(Context){
+                                return NoticesScreen();
+                              }),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),
@@ -174,8 +185,25 @@ class _homePageState extends State<homePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Button('To-Do','ToDoClass'),
-                          Button('Time-Table',),
+                          shortcutButton(
+                            displayText: 'ToDo',
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder:(Context){
+                                return ToDoClass();
+                              }),
+                              );
+                            },
+                          ),
+
+                          shortcutButton(
+                            displayText: 'Timetable',
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder:(Context){
+                                return ToDoClass();
+                              }),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),
@@ -292,8 +320,44 @@ class _homePageState extends State<homePage> {
   }
 }
 
+class shortcutButton extends StatelessWidget {
+
+  shortcutButton({@required this.displayText ,this.onPressed });
+  String displayText;
+  Function onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 105,
+      width: 105,
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        color: Colors.white,
+        onPressed: onPressed,
+
+        child: Column(
+          mainAxisAlignment:
+              MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.asset('images/$displayText.png'),
+            Text(
+              '$displayText',
+              style: TextStyle(
+                letterSpacing: 0.05,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class percentIndicator extends StatefulWidget {
-  percentIndicator({this.subjectName ,this.dPercentage  , this.color});
+  percentIndicator({this.subjectName, this.dPercentage, this.color});
   String subjectName;
   double dPercentage;
 //  String strPercentage;
@@ -311,7 +375,7 @@ class _percentIndicatorState extends State<percentIndicator> {
       animation: true,
       percent: widget.dPercentage, //to be changed
       center: Text(
-        ((widget.dPercentage)*100).toString()+'%', //to be changed
+        ((widget.dPercentage) * 100).toString() + '%', //to be changed
         style: TextStyle(fontSize: 15.0),
       ),
       footer: Text(
@@ -323,36 +387,3 @@ class _percentIndicatorState extends State<percentIndicator> {
     );
   }
 }
-
-Container Button(String buttonName, String screenName){
-  return Container(
-                            height: 105,
-                            width: 105,
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              color: Colors.white,
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (Context) {
-                                    return $screenName();
-                                  }),
-                                );
-                              },
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image.asset('images/$q.jpeg'),
-                                  Text(
-                                    '$q',
-                                    style: TextStyle(
-                                      letterSpacing: 0.05,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
